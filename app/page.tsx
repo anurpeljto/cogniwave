@@ -18,11 +18,11 @@ export default async function Home() {
         <source src="/spinnyhand.mp4" type="video/mp4"/>
       </video>
       <div className="flex flex-col z-10 gap-5 flex-1">
-        <span className="sm:text-8xl text-xl font-bold text-purple-400 bg-transparent">
+        <span className="lg:text-8xl sm:text-6xl text-xl font-bold text-purple-400 bg-transparent">
           Embark on your mental journey with professionals
         </span>
         <p className="sm:text-lg bg-transparent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, earum voluptas cupiditate ut, laboriosam qui sapiente libero molestiae tempore animi odit voluptates quod a officia eaque nulla excepturi, iusto harum?</p>  
-        <div className="w-full flex flex-row justify-center items-center gap-10">
+        <div className="w-full flex flex-row justify-start items-center gap-10">
           <CustomButton title="Start cure" bg="bg-purple-400" text="text-white" customStyles="py-3 px-20 font-bold"/> 
           <CustomButton title="Watch review" bg="bg-white" text="text-purple-400" customStyles="py-3 px-20 font-bold border-purple-400"/> 
         </div>  

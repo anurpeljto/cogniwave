@@ -5,7 +5,7 @@ import LogoText from './LogoText'
 
 const Navbar = () => {
   return (
-    <nav className='w-full 2xl:py-10 py-3 flex justify-between items-center border-b-2 border-gray-100 z-10'>
+    <nav className='2xl:py-10 py-3 flex justify-between items-center border-b-2 border-gray-100 z-10 sm:mx-20 mx-10'>
       <LogoText/>
       <div className='sm:flex hidden flex-row sm:gap-12 flex-1 justify-between items-center text-md'>
           <LinkWithUnderline title='Services' href='#'/>

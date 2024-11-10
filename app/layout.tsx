@@ -5,7 +5,7 @@ import {Roboto} from 'next/font/google';
 
 const roboto_init = Roboto({
   subsets: ['latin'],
-  weight: ['100', '300', '700'],
+  weight: ['100', '300', '400', '700'],
   variable: '--font-roboto'
 })
 
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${roboto_init.variable} antialiased sm:mx-20 mx-10`}
+        className={`${roboto_init.variable} antialiased`}
       >
         <Navbar/>
         {children}

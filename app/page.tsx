@@ -1,4 +1,5 @@
 import CustomButton from "@/components/CustomButton";
+import Image from "next/image";
 
 export default async function Home() {
   return (
@@ -17,7 +18,7 @@ export default async function Home() {
       <video autoPlay loop muted className="w-full h-[90vh] z-0 object-cover flex-1">
         <source src="/spinnyhand.mp4" type="video/mp4"/>
       </video>
-      <div className="flex flex-col z-10 gap-5 flex-1 animate-appear">
+      <div className="flex flex-col z-10 gap-5 flex-1 animate-appear mt-40">
         <span className="lg:text-8xl sm:text-6xl text-xl font-bold text-purple-400 bg-transparent">
           Embark on your mental journey with professionals
         </span>

@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useRef, useState} from 'react';
 import { motion, useInView } from "framer-motion";
+import Image from 'next/image';
 
 const OurApproach = () => {
   const ref = useRef(null);
@@ -42,6 +43,15 @@ const OurApproach = () => {
                     {el}{" "}
                     </motion.span>
                 ))}
+
+                    <motion.div
+                        initial={{y: 100, opacity: 0}}
+                        animate={{y:0, opacity: 1}}
+                        transition={{duration: 2.0}}
+                        className='absolute right-32'
+                    >
+                        <Image src='/undraw_mindfulness_8gqa.svg' alt='walking under a tree' height={400} width={400}/>
+                    </motion.div>
                 </div>
             )
             :

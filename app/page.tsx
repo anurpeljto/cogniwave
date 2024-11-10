@@ -1,5 +1,3 @@
-import CustomButton from "@/components/CustomButton";
-import Image from "next/image";
 import Hero from "./(pages)/Hero";
 import OurApproach from "./(pages)/OurApproach";
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import {Roboto} from 'next/font/google';
+import Script from "next/script";
 
 const roboto_init = Roboto({
   subsets: ['latin'],
@@ -21,6 +22,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-C9GB5D8P2P" strategy="afterInteractive"></Script>
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-C9GB5D8P2P');
+          `}
+        </Script>
+      </head>
       <body
         className={`${roboto_init.variable} antialiased`}
       >

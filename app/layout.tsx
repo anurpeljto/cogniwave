@@ -29,8 +29,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-C9GB5D8P2P');
-          `}
+            gtag('config', 'G-C9GB5D8P2P', { cookie_domain: 'cogniwave.vercel.app' });          `}
         </Script>
       </head>
       <body

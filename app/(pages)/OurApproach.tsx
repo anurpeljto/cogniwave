@@ -3,7 +3,6 @@ import React, { useEffect, useRef} from 'react';
 import { motion, useInView } from "framer-motion";
 import Image from 'next/image';
 import ContentCard from '@/components/ContentCard';
-import { Content } from 'next/font/google';
 
 const OurApproach = () => {
   const ref = useRef(null);

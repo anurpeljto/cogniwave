@@ -6,9 +6,9 @@ import ContentCard from '@/components/ContentCard';
 
 const OurApproach = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, {margin: '50px'});
   const text = "Art and science of mental wellness".split(" ");
-  
+
   return (
     <section ref={ref}
       className='min-h-[100vh] bg-black text-white sm:px-20 px-10 py-10 flex flex-col'

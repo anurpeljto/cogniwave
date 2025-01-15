@@ -1,11 +1,28 @@
 import CustomButton from '@/components/CustomButton'
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 const Hero = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current){
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section className="mt-24 flex md:flex-row flex-col sm:mx-20 mx-10 mb-14">
+    <section ref={ref} className="mt-24 flex md:flex-row flex-col sm:mx-20 mx-10 mb-14">
       {/* <video autoPlay loop muted className="absolute top-[-90px] left-[-50px] w-100 h-90 z-0">
         <source src="/spinnyhand.mp4" type="video/mp4"/>
       </video>
@@ -17,9 +34,10 @@ const Hero = () => {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, earum voluptas cupiditate ut, laboriosam qui sapiente libero molestiae tempore animi odit voluptates quod a officia eaque nulla excepturi, iusto harum?</p>     
       </div>   */}
 
-      {!isVideoLoaded && (
+      {!isVideoLoaded && isInView && (
         <img
           src='vercel.svg'
+          className='absolute'
           height={10}
           width={10}
           alt='Placeholder before loading video'
@@ -27,10 +45,11 @@ const Hero = () => {
       )}
       <video 
           autoPlay 
-          loop 
+          loop
           muted
           onLoadedData={() => setIsVideoLoaded(true)} 
-          className="w-full h-[90vh] z-0 object-cover flex-1">
+          className="w-full h-[90vh] z-0 object-cover flex-1"
+          >
           <source src="/spinnyhand.webm" type="video/webm"/>
       </video>
       <div className="flex flex-col z-10 gap-5 flex-1 animate-appear">

@@ -1,7 +1,9 @@
 import React from 'react'
-import CustomButton from './CustomButton'
-import LinkWithUnderline from './LinkUnderline'
-import LogoText from './LogoText'
+import dynamic from 'next/dynamic'
+
+const LinkWithUnderline = dynamic(() => import('./LinkUnderline'));
+const CustomButton = dynamic(() => import('./CustomButton'));
+const LogoText = dynamic(() => import('./LogoText'));
 
 const Navbar = () => {
   return (

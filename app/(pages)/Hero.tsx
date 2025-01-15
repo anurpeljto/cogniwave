@@ -1,9 +1,11 @@
 import CustomButton from '@/components/CustomButton'
-import React from 'react'
+import React, { useState } from 'react'
 
 const Hero = () => {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
   return (
-    <section className="mt-24 flex md:flex-row flex-col sm:mx-20 mx-10">
+    <section className="mt-24 flex md:flex-row flex-col sm:mx-20 mx-10 mb-14">
       {/* <video autoPlay loop muted className="absolute top-[-90px] left-[-50px] w-100 h-90 z-0">
         <source src="/spinnyhand.mp4" type="video/mp4"/>
       </video>
@@ -15,8 +17,21 @@ const Hero = () => {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, earum voluptas cupiditate ut, laboriosam qui sapiente libero molestiae tempore animi odit voluptates quod a officia eaque nulla excepturi, iusto harum?</p>     
       </div>   */}
 
-      <video autoPlay loop muted className="w-full h-[90vh] z-0 object-cover flex-1">
-        <source src="/spinnyhand.mp4" type="video/mp4"/>
+      {!isVideoLoaded && (
+        <img
+          src='vercel.svg'
+          height={10}
+          width={10}
+          alt='Placeholder before loading video'
+        />
+      )}
+      <video 
+          autoPlay 
+          loop 
+          muted
+          onLoadedData={() => setIsVideoLoaded(true)} 
+          className="w-full h-[90vh] z-0 object-cover flex-1">
+          <source src="/spinnyhand.webm" type="video/webm"/>
       </video>
       <div className="flex flex-col z-10 gap-5 flex-1 animate-appear">
         <span className="lg:text-8xl sm:text-6xl text-xl font-bold text-purple-400 bg-transparent">

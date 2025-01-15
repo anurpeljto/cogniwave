@@ -3,16 +3,17 @@ import React from 'react'
 import CustomButton from './CustomButton'
 
 interface ContentCardProps {
-    title: string,
-    img?: string,
-    description: string,
+    title?: string,
+    img: string,
+    description?: string,
     styles?: string
 }
 
 const ContentCard = (content: ContentCardProps) => {
   return (
-    <div className='bg-white p-5 flex-1 flex flex-col gap-5 text-black rounded-lg'>
-        <Image src='/undraw_walk_ing_qkyj.svg' alt='Walking under a tree' height={800} width={800} className='object-contain border-2 border-black rounded-lg'/>
+    <div className='bg-white sm:p-8 p-5 flex flex-col gap-5 text-black rounded-lg'>
+        <Image src={content.img} alt='Walking under a tree' height={300} width={500} className='object-contain border-2 border-black rounded-lg sm:block hidden'/>
+        <Image src={content.img} alt='Walking under a tree' height={200} width={200} className='object-contain border-2 border-black rounded-lg sm:hidden block'/>
         <div>
             <h1 className='font-bold'>{content.title}</h1>
             <p className='text-gray-500 text-sm'>{content.description}</p>

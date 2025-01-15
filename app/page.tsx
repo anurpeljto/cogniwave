@@ -1,11 +1,20 @@
+'use client'
+import { useRef, Suspense, lazy } from "react";
 import Hero from "./(pages)/Hero";
-import OurApproach from "./(pages)/OurApproach";
+import { useInView } from "framer-motion";
 
-export default async function Home() {
+const OurApproach = lazy(() => import('./(pages)/OurApproach'));
+const Services = lazy(() => import('./(pages)/Services'));
+
+export default function Home() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {once: true});
   return (
-    <main className="flex flex-col gap-14">
+    <main className="flex flex-col">
       <Hero/>
-      <OurApproach/>
+      <Suspense fallback={<div>Loading...</div>}/>
+      <OurApproach ref={ref} isInView={isInView}/>
+      <Services/>
     </main>
   )
 }

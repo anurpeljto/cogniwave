@@ -89,3 +89,8 @@ span:hover .letter:nth-child(10) {
   animation-delay: 0.9s;
 }
 
+.gradient {
+  background-color: #dce9f0;
+background-image: linear-gradient(62deg, #dce9f0 27%, #E0C3FC 100%);
+
+}

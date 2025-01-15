@@ -1,5 +1,5 @@
 'use client';
-import React, { MutableRefObject, useEffect, useState, useRef} from 'react';
+import React, {useRef} from 'react';
 import { motion, useInView } from "framer-motion";
 import Image from 'next/image';
 import ContentCard from '@/components/ContentCard';

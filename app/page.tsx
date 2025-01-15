@@ -1,7 +1,6 @@
 'use client'
-import { useRef, Suspense, lazy } from "react";
+import { Suspense, lazy } from "react";
 import Hero from "./(pages)/Hero";
-import { useInView } from "framer-motion";
 
 const OurApproach = lazy(() => import('./(pages)/OurApproach'));
 const Services = lazy(() => import('./(pages)/Services'));

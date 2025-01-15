@@ -1,27 +1,14 @@
 'use client';
-import React, { MutableRefObject, useEffect} from 'react';
-import { motion } from "framer-motion";
+import React, { MutableRefObject, useEffect, useState, useRef} from 'react';
+import { motion, useInView } from "framer-motion";
 import Image from 'next/image';
 import ContentCard from '@/components/ContentCard';
 
-export interface OurApproachProps {
-  ref: MutableRefObject<null>,
-  isInView: boolean
-}
-
-const OurApproach = (props: OurApproachProps) => {
-  const {ref, isInView} = props;
+const OurApproach = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
   const text = "Art and science of mental wellness".split(" ");
-
-  useEffect(() => {
-    if(isInView){
-        console.log('In view!');
-
-    }
-    else {
-        console.log('Not in view');
-    }
-  }, [isInView]);
+  
   return (
     <section ref={ref}
       className='min-h-[100vh] bg-black text-white sm:px-20 px-10 py-10 flex flex-col'

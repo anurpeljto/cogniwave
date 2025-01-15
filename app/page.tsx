@@ -7,13 +7,11 @@ const OurApproach = lazy(() => import('./(pages)/OurApproach'));
 const Services = lazy(() => import('./(pages)/Services'));
 
 export default function Home() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, {once: true});
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col scroll-smooth">
       <Hero/>
       <Suspense fallback={<div>Loading...</div>}/>
-      <OurApproach ref={ref} isInView={isInView}/>
+      <OurApproach/>
       <Services/>
     </main>
   )

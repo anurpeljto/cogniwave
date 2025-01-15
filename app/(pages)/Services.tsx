@@ -5,7 +5,7 @@ import React, { useRef } from 'react'
 
 const Services = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, {once: true});
+  const isInView = useInView(ref);
   const text = "Tailored solutions for your well-being".split(" ");
   return (
     <section ref={ref}

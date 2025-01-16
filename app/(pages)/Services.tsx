@@ -41,8 +41,8 @@ const Services = () => {
         }
       </div>
       <div className='flex sm:flex-row flex-col mt-5 w-full justify-between'>
-        <Image src='/therapy.jpg' alt='Therapy session' height={400} width={300} className='object-contain rounded-lg h-[500px]'/>
-        <Image src='/therapy.jpg' alt='Therapy session' height={400} width={300} className='object-contain rounded-lg h-[500px]'/>
+        <Image src='/therapy.jpg' alt='Therapy session' height={400} width={500} className='object-cover rounded-lg h-[500px]'/>
+        <Image src='/therapy.jpg' alt='Therapy session' height={400} width={500} className='object-cover rounded-lg h-[500px]'/>
       </div>
     </section>
   )

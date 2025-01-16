@@ -67,10 +67,10 @@ const OurApproach = () => {
           initial={{y:100, opacity: 0}}
           animate={{y: 0, opacity: 1}}
           transition={{duration: 2.2}}
-          className='mt-20 flex sm:flex-row flex-col gap-5 w-full'
+          className='mt-20 flex sm:flex-row flex-col gap-10 w-full justify-between'
         >
-          <ContentCard description='Our holistic approach embraces your mind, body and spirit, fostering a balanced and thriving you.' title='Holistic approach' img='/undraw_walk_ing_qkyj.svg' />
-          <ContentCard description='Discover the power within as we blend evidence-based techniques with creative self-expression' title='Unlock your potential' img='/undraw_walk_ing_qkyj.svg' />
+          <ContentCard description='Our holistic approach embraces your mind, body and spirit, fostering a balanced and thriving you.' title='Holistic approach' img='/smiley-woman.jpg' numberOfFile= '01' />
+          <ContentCard description='Discover the power within as we blend evidence-based techniques with creative self-expression' title='Unlock your potential' img='/undraw_walk_ing_qkyj.svg' numberOfFile='02' />
         </motion.div>
           ):
           <div>Loading...</div>

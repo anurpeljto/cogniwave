@@ -13,8 +13,8 @@ interface ContentCardProps {
 const ContentCard = (content: ContentCardProps) => {
   return (
     <div className='bg-white sm:p-8 p-5 z-10 flex flex-col gap-5 text-black rounded-lg rounded-tl-xl relative'>
-        <Image src={content.img} alt='Walking under a tree' height={300} width={500} className='object-contain border-2 rounded-lg sm:block hidden'/>
-        <Image src={content.img} alt='Walking under a tree' height={200} width={200} className='object-contain border-2 rounded-lg sm:hidden block'/>
+        <Image src={content.img} alt='Walking under a tree' height={300} width={500} className='object-cover border-2 rounded-lg sm:block hidden max-h-[300px]'/>
+        <Image src={content.img} alt='Walking under a tree' height={200} width={500} className='object-cover border-2 rounded-lg sm:hidden block'/>
         <div className='flex flex-col gap-2'>
             <h1 className='font-light sm:text-5xl text-3xl'>{content.title}</h1>
             <p className='text-gray-400 text-sm'>{content.description}</p>
